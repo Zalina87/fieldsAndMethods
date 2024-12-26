@@ -126,4 +126,21 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void shouldCreateRadioWithDefaultStations() {
+        Radio radio = new Radio();
+        int expected = 10;
+        int actual = radio.getNumberOfStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    void shouldCreateRadioWithCustomStationCount() {
+        Radio radio = new Radio(7);
+        int expected = 7;
+        int actual = radio.getNumberOfStation();
+        Assertions.assertEquals(expected, actual);
+    }
 }
